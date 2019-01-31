@@ -9,12 +9,38 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var num: Int = 0
+    @IBOutlet var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func plus(){
+        num += 1
+        label.text = String(num)
+    }
+    
+    @IBAction func minus(){
+        num -= 1
+        label.text = String(num)
+    }
+    
+    @IBAction func waru(){
+        num = num/2
+        label.text = String(num)
+    }
+    
+    @IBAction func kakeru(){
+        num = num*2
+        label.text = String(num)
+    }
+    
+    @IBAction func reset(){
+        num = 0
+        label.text = String(num)
+    }
 
 }
 
